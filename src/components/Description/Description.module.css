@@ -1,0 +1,16 @@
+.wrapper {
+    border: 3px solid green;
+    border-radius: 20px;
+    width: 400px;
+    padding: 12px;
+}
+
+.title {
+    margin: 0 0 12px;
+    text-align: center;
+}
+
+.description {
+    font-size: 16px;
+    letter-spacing: -0.02em;
+}

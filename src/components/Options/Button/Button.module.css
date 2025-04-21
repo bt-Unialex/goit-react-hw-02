@@ -1,0 +1,6 @@
+.button {
+    text-transform: capitalize;
+    padding: 8px;
+    min-width: 63px;
+    user-select: none;
+}

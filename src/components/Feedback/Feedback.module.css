@@ -1,0 +1,11 @@
+.wrapper {
+    border: 3px solid green;
+    border-radius: 20px;
+    width: 400px;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+.textline {
+    font-weight: bold;
+}
