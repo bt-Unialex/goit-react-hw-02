@@ -1,6 +1,11 @@
 import Button from './Button/Button';
 import css from './Options.module.css';
-export default function Options({ feedback, setFeedback, resetVisible }) {
+export default function Options({
+  feedback,
+  setFeedback,
+  resetVisible,
+  // STORAGE_KEY,
+}) {
   function handleClick(feedbackIs) {
     return () => {
       setFeedback({
@@ -9,13 +14,12 @@ export default function Options({ feedback, setFeedback, resetVisible }) {
       });
     };
   }
+
   function clickReset() {
-    setFeedback({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
+    // window.localStorage.removeItem(STORAGE_KEY);
+    setFeedback({ good: 0, neutral: 0, bad: 0 });
   }
+
   return (
     <div className={css.wrapper}>
       <div className={css.feedbuttons}>
