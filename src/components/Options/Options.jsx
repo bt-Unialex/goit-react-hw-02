@@ -2,29 +2,15 @@ import Button from './Button/Button';
 import css from './Options.module.css';
 export default function Options({
   feedback,
-  setFeedback,
   resetVisible,
-  // STORAGE_KEY,
+  clickFeedback,
+  clickReset,
 }) {
-  function handleClick(feedbackIs) {
-    return () => {
-      setFeedback({
-        ...feedback,
-        [feedbackIs]: feedback[feedbackIs] + 1,
-      });
-    };
-  }
-
-  function clickReset() {
-    // window.localStorage.removeItem(STORAGE_KEY);
-    setFeedback({ good: 0, neutral: 0, bad: 0 });
-  }
-
   return (
     <div className={css.wrapper}>
       <div className={css.feedbuttons}>
         {Object.keys(feedback).map((key) => (
-          <Button key={key} values={feedback} onClick={handleClick(key)}>
+          <Button key={key} values={feedback} onClick={clickFeedback(key)}>
             {key}
           </Button>
         ))}
